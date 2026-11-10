@@ -1,0 +1,27 @@
+# Netlify: investor demo. The whole product (UI + the real server logic) runs in the visitor's browser,
+# so no server is required. Build: tsc + vite (demo mode) + bundle the in-browser backend.
+[build]
+  command = "cd web && npm ci && npm run build:demo"
+  publish = "web/dist"
+
+[build.environment]
+  NODE_VERSION = "22"
+
+[[redirects]]
+  from = "/*"
+  to = "/index.html"
+  status = 200
+
+[[headers]]
+  for = "/demo-worker.js"
+  [headers.values]
+    Cache-Control = "no-cache"
+[[headers]]
+  for = "/demo-bridge.js"
+  [headers.values]
+    Cache-Control = "no-cache"
+[[headers]]
+  for = "/*"
+  [headers.values]
+    X-Content-Type-Options = "nosniff"
+    Referrer-Policy = "strict-origin-when-cross-origin"

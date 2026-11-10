@@ -1,0 +1,54 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Brightwave Electronics — Laptops (widget demo)</title>
+<script>if(!location.search)history.replaceState(null,'','?page=/laptops');</script>
+<style>
+  :root{--ink:#1b1322;--mute:#5e566b;--line:#e6e0ec;--bg:#f7f5f9;--brand:#81007f}
+  *{box-sizing:border-box}
+  body{margin:0;font:16px/1.55 system-ui,-apple-system,"Segoe UI",Roboto,sans-serif;color:var(--ink);background:var(--bg)}
+  .demo{background:#fed700;color:#2a0a2c;text-align:center;padding:10px 16px;font-weight:600;font-size:14px}
+  header{background:#fff;border-bottom:1px solid var(--line)}
+  .wrap{max-width:1040px;margin:0 auto;padding:0 20px}
+  .bar{display:flex;align-items:center;gap:24px;height:64px}
+  .logo{font-weight:800;font-size:20px;letter-spacing:-.02em}.logo b{color:var(--brand)}
+  nav{display:flex;gap:20px;margin-left:auto;font-size:15px;color:var(--mute)}
+  .hero{padding:56px 0 36px}
+  .hero h1{font-size:clamp(30px,5vw,46px);line-height:1.1;margin:0 0 12px;letter-spacing:-.03em;max-width:18ch}
+  .hero p{color:var(--mute);max-width:56ch;margin:0 0 20px}
+  .btn{display:inline-block;background:var(--brand);color:#fff;padding:12px 20px;border-radius:12px;font-weight:600;text-decoration:none}
+  .grid{display:grid;grid-template-columns:repeat(auto-fill,minmax(230px,1fr));gap:18px;padding-bottom:48px}
+  .card{background:#fff;border:1px solid var(--line);border-radius:18px;padding:20px;display:flex;flex-direction:column;gap:8px}
+  .shot{height:110px;border-radius:12px;background:linear-gradient(135deg,#f6e1f6,#edc3ed);display:grid;place-items:center;font-size:42px}
+  .card h3{margin:6px 0 0;font-size:17px}.card small{color:var(--mute)}
+  .price{font-size:20px;font-weight:700}
+  .tag{align-self:flex-start;font-size:12.5px;font-weight:600;padding:2px 10px;border-radius:99px;background:#e2f5ec;color:#0f7b55}
+  .tag.low{background:#fdefd9;color:#a8480a}.tag.out{background:#eeeaf1;color:#5e566b}
+  footer{border-top:1px solid var(--line);padding:24px 0 40px;color:var(--mute);font-size:14px}
+  .demo button{margin-left:10px;background:#2a0a2c;color:#fff;border:0;border-radius:999px;padding:5px 14px;font:inherit;font-size:13px;cursor:pointer}.demo button:hover{background:#4a1a4d}
+</style>
+</head>
+<body>
+<div class="demo">This is a demo page for testing the Conversa AI widget. Stay here for about 12 seconds and the AI agent will start the conversation. <button id="newchat" type="button">Start a new test chat</button></div>
+<header><div class="wrap bar"><div class="logo">Bright<b>wave</b></div><nav><span>Laptops</span><span>Accessories</span><span>Delivery</span><span>Contact</span></nav></div></header>
+<main class="wrap">
+  <section class="hero">
+    <h1>Laptops for work, school and everything between.</h1>
+    <p>Genuine stock, 12-month warranty and nationwide delivery from our showroom at 14 Allen Avenue, Ikeja.</p>
+    <a class="btn" href="#laptops">Shop laptops</a>
+  </section>
+  <section class="grid" id="laptops" aria-label="Laptops">
+    <article class="card"><div class="shot" aria-hidden="true">💻</div><h3>HP 250 G10</h3><small>Core i5 · 16GB RAM · 512GB SSD</small><div class="price">₦485,000</div><span class="tag">In stock · 12 units</span></article>
+    <article class="card"><div class="shot" aria-hidden="true">💻</div><h3>Lenovo IdeaPad Slim 3</h3><small>Ryzen 5 · 16GB RAM · 512GB SSD</small><div class="price">₦560,000</div><span class="tag">In stock · 7 units</span></article>
+    <article class="card"><div class="shot" aria-hidden="true">💻</div><h3>Dell Inspiron 15</h3><small>Core i7 · 16GB RAM · 1TB SSD</small><div class="price">₦610,000</div><span class="tag low">Low stock · 2 units</span></article>
+    <article class="card"><div class="shot" aria-hidden="true">💻</div><h3>MacBook Air M2</h3><small>8GB · 256GB</small><div class="price">Out of stock</div><span class="tag out">Back in about 2 weeks</span></article>
+  </section>
+</main>
+<footer><div class="wrap">© Brightwave Electronics · Mon–Sat 9am–6pm WAT · Powered by the Conversa AI website widget</div></footer>
+<script src="/demo-bridge.js"></script>
+<script>document.addEventListener('DOMContentLoaded',function(){var b=document.getElementById('newchat');if(b)b.onclick=function(){try{Object.keys(localStorage).filter(function(k){return k.indexOf('conversa_vid_')===0}).forEach(function(k){localStorage.removeItem(k)});Object.keys(sessionStorage).filter(function(k){return k.indexOf('conversa_pro_')===0}).forEach(function(k){sessionStorage.removeItem(k)})}catch(e){}location.reload()}})</script>
+<script src="/widget.js" data-key="pk_bw_7f3a91c2" async></script>
+</body>
+</html>

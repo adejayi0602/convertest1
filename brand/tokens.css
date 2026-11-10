@@ -1,0 +1,53 @@
+/* Conversa AI design tokens — source of truth (mirrored in /brand/tokens.css and /brand/tokens.json).
+   Anchors sampled from the logo artwork: Conversa Purple #81007F · Signal Gold #FED700. */
+:root {
+  /* Conversa Purple */
+  --brand-50: #fbf2fb; --brand-100: #f6e1f6; --brand-200: #edc3ed; --brand-300: #de96dd; --brand-400: #c65ac4;
+  --brand-500: #a31fa1; --brand-600: #81007f; --brand-700: #6a0068; --brand-800: #540052; --brand-900: #3e003d; --brand-950: #270026;
+  /* Signal Gold */
+  --gold-50: #fffbe0; --gold-100: #fff4a8; --gold-200: #ffea6b; --gold-300: #ffdf33; --gold-400: #fed700; --gold-500: #e5bf00; --gold-600: #b89600; --gold-700: #8a7000; --gold-800: #5c4b00;
+  /* Aubergine neutrals */
+  --ink-0: #ffffff; --ink-25: #fbfafc; --ink-50: #f6f4f8; --ink-100: #eeeaf1; --ink-200: #e0dbe6; --ink-300: #c9c2d2; --ink-400: #a39baf; --ink-500: #7d748b; --ink-600: #5e566b; --ink-700: #463f52; --ink-800: #2e2838; --ink-900: #1b1322; --ink-950: #130c18;
+
+  /* Semantic (light) */
+  --bg: #f6f4f8; --surface: #ffffff; --surface-2: #faf8fb; --surface-3: #f1edf4; --surface-hover: #f6f1f8;
+  --border: #e6e0ec; --border-strong: #d3cbdc;
+  --text: #1b1322; --text-2: #5e566b; --text-3: #7d748b; --text-inverse: #ffffff;
+  --primary: var(--brand-600); --primary-hover: var(--brand-700); --primary-press: var(--brand-800); --on-primary: #ffffff;
+  --primary-soft: var(--brand-50); --primary-soft-2: var(--brand-100); --primary-text: var(--brand-700);
+  --accent: var(--gold-400); --accent-soft: var(--gold-50); --on-accent: #2a0a2c; --accent-text: #6b5600;
+  --rail: #1a0b1d; --rail-2: #28122d; --rail-3: #341a3a; --rail-text: #e2d6e8; --rail-dim: #a392ae; --rail-border: rgba(255, 255, 255, 0.08);
+
+  --success: #0f7b55; --success-soft: #e2f5ec; --warning: #a8480a; --warning-soft: #fdefd9; --danger: #c2253f; --danger-soft: #fde8ec; --info: #2557d6; --info-soft: #e6edfd;
+  --ch-whatsapp: #1b8f4c; --ch-whatsapp-soft: #e1f5e9; --ch-telegram: #1a86b8; --ch-telegram-soft: #e1f1f9; --ch-web: var(--brand-600); --ch-web-soft: var(--brand-50);
+
+  /* Data viz — categorical, validated for CVD separation (order is fixed, never cycled) */
+  --c1: #a526a3; --c2: #d99a00; --c3: #0690a8; --c4: #e0553f; --c5: #3a6bdb; --grid: #ece7f0; --axis: #8a8197;
+
+  --font-display: 'Bricolage Grotesque Variable', 'Bricolage Grotesque', ui-sans-serif, system-ui, sans-serif;
+  --font-ui: 'Figtree Variable', 'Figtree', ui-sans-serif, system-ui, -apple-system, 'Segoe UI', Roboto, sans-serif;
+
+  --r-xs: 6px; --r-sm: 9px; --r-md: 12px; --r-lg: 16px; --r-xl: 22px; --r-pill: 999px;
+  --sh-1: 0 1px 2px rgba(38, 0, 38, 0.06), 0 0 0 1px rgba(38, 0, 38, 0.02);
+  --sh-2: 0 8px 24px -8px rgba(38, 0, 38, 0.2);
+  --sh-3: 0 28px 70px -16px rgba(38, 0, 38, 0.38);
+  --focus: 0 0 0 3px rgba(129, 0, 127, 0.28);
+  --ease: cubic-bezier(0.2, 0.8, 0.2, 1);
+  --rail-w: 252px; --topbar-h: 64px;
+}
+
+:root[data-theme='dark'] {
+  color-scheme: dark;
+  --bg: #130a16; --surface: #1c1122; --surface-2: #22152a; --surface-3: #2b1b34; --surface-hover: #2a1a33;
+  --border: #35243f; --border-strong: #4a3556;
+  --text: #f3edf6; --text-2: #c0b3ca; --text-3: #94869f;
+  --primary: #a31fa1; --primary-hover: #b63bb3; --primary-press: #8d138b; --on-primary: #ffffff;
+  --primary-soft: rgba(198, 90, 196, 0.14); --primary-soft-2: rgba(198, 90, 196, 0.24); --primary-text: #e3a5e1;
+  --accent-soft: rgba(254, 215, 0, 0.12); --accent-text: #ffe566;
+  --rail: #0f0712; --rail-2: #1a0e1e; --rail-3: #26142c;
+  --success: #46c993; --success-soft: rgba(70, 201, 147, 0.14); --warning: #f0a35a; --warning-soft: rgba(240, 163, 90, 0.14); --danger: #ff7a90; --danger-soft: rgba(255, 122, 144, 0.14); --info: #8aa8ff; --info-soft: rgba(138, 168, 255, 0.14);
+  --ch-whatsapp: #4fd68b; --ch-whatsapp-soft: rgba(79, 214, 139, 0.14); --ch-telegram: #5bc0ee; --ch-telegram-soft: rgba(91, 192, 238, 0.14); --ch-web: #e3a5e1; --ch-web-soft: rgba(198, 90, 196, 0.16);
+  --c1: #c657c4; --c2: #d9a21a; --c3: #2aa6bf; --c4: #ee6f52; --c5: #6b90f0; --grid: #2f2039; --axis: #94869f;
+  --sh-1: 0 1px 2px rgba(0, 0, 0, 0.4); --sh-2: 0 10px 30px -8px rgba(0, 0, 0, 0.55); --sh-3: 0 30px 80px -16px rgba(0, 0, 0, 0.7);
+  --focus: 0 0 0 3px rgba(227, 165, 225, 0.4);
+}
