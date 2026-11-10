@@ -1,11 +1,6 @@
-# Netlify: investor demo. The whole product (UI + the real server logic) runs in the visitor's browser,
-# so no server is required. Build: tsc + vite (demo mode) + bundle the in-browser backend.
+# Pre-built Conversa AI investor demo: nothing to build, Netlify just serves this folder.
 [build]
-  command = "cd web && npm ci && npm run build:demo"
-  publish = "web/dist"
-
-[build.environment]
-  NODE_VERSION = "22"
+  publish = "."
 
 [[redirects]]
   from = "/*"
@@ -20,8 +15,3 @@
   for = "/demo-bridge.js"
   [headers.values]
     Cache-Control = "no-cache"
-[[headers]]
-  for = "/*"
-  [headers.values]
-    X-Content-Type-Options = "nosniff"
-    Referrer-Policy = "strict-origin-when-cross-origin"
