@@ -1,17 +1,2 @@
-# Pre-built Conversa AI investor demo: nothing to build, Netlify just serves this folder.
 [build]
   publish = "."
-
-[[redirects]]
-  from = "/*"
-  to = "/index.html"
-  status = 200
-
-[[headers]]
-  for = "/demo-worker.js"
-  [headers.values]
-    Cache-Control = "no-cache"
-[[headers]]
-  for = "/demo-bridge.js"
-  [headers.values]
-    Cache-Control = "no-cache"
